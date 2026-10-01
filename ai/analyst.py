@@ -37,7 +37,7 @@ def _analyze_gemini(payload, key=None):
             "키를 입력하지 않아도 '무료 규칙 기반 분석'은 사용할 수 있습니다."
         )
 
-    model = os.getenv("GEMINI_MODEL", "gemini-2.5-flash-lite").strip()
+    model = os.getenv("GEMINI_MODEL", "gemini-3.5-flash-lite").strip()
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
     body = {
         "systemInstruction": {"parts": [{"text": SYSTEM_PROMPT}]},
